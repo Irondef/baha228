@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\Zadaniya\bin\Debug\net6.0\Zadaniya.exe
+C:\Users\user\Desktop\Zadaniya\bin\Debug\net6.0\Zadaniya.deps.json
+C:\Users\user\Desktop\Zadaniya\bin\Debug\net6.0\Zadaniya.runtimeconfig.json
+C:\Users\user\Desktop\Zadaniya\bin\Debug\net6.0\Zadaniya.dll
+C:\Users\user\Desktop\Zadaniya\bin\Debug\net6.0\Zadaniya.pdb
+C:\Users\user\Desktop\Zadaniya\obj\Debug\net6.0\Zadaniya.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Zadaniya\obj\Debug\net6.0\Zadaniya.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Zadaniya\obj\Debug\net6.0\Zadaniya.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Zadaniya\obj\Debug\net6.0\Zadaniya.AssemblyInfo.cs
+C:\Users\user\Desktop\Zadaniya\obj\Debug\net6.0\Zadaniya.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Zadaniya\obj\Debug\net6.0\Zadaniya.dll
+C:\Users\user\Desktop\Zadaniya\obj\Debug\net6.0\refint\Zadaniya.dll
+C:\Users\user\Desktop\Zadaniya\obj\Debug\net6.0\Zadaniya.pdb
+C:\Users\user\Desktop\Zadaniya\obj\Debug\net6.0\Zadaniya.genruntimeconfig.cache
+C:\Users\user\Desktop\Zadaniya\obj\Debug\net6.0\ref\Zadaniya.dll
