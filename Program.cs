@@ -95,21 +95,28 @@ using System.Threading.Tasks;
             }
         }
     }
-
     public static class Cinema { //Задание 3
 
         static int[] placeNum = new int[90]; //90 - количество мест
+
         public static void AddClient() {
 
             int ticketsSold = 0;
+            int ticketPrice = 0;
+            int soldTicketPrice = 0;
             Console.WriteLine("Введите номер места, для брони (1 - 90). Занятые места: ");
-            for (int i = 0; i < placeNum.Length; i++)
+            for (int i = 0; i < 9; i++)
             {
-                if(placeNum[i] == 0) continue;
-                ticketsSold++;
-                Console.Write("{0}, ",placeNum[i]);
+                ticketPrice = ticketPrice + 100;
+                for (int x = 0; x < 10; x++)
+                {
+                    if(placeNum[i*10+x] == 0) continue;
+                    ticketsSold++;
+                    Console.Write("{0}, ",placeNum[i*10+x]);
+                    soldTicketPrice = soldTicketPrice + ticketPrice;
+                }
             }
-            Console.WriteLine("Продано билетов:{0}, на сумму {1}", ticketsSold, ticketsSold * 300); // 300 - стоимость 1 билета
+            Console.WriteLine("Продано билетов:{0}, на сумму {1}", ticketsSold, ticketsSold * soldTicketPrice);
             int chosenPlace = Convert.ToInt32(Console.ReadLine());
             placeNum[chosenPlace] = chosenPlace;
             AddClient();
