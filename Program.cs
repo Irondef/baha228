@@ -31,7 +31,7 @@ using System.Threading.Tasks;
 
         public static void Exchange() {
             Console.WriteLine("Введите вашу валюту: usd, eur, kgs, rub");
-            string currency = Console.ReadLine();
+            string currency = Console.ReadLine()!;
             double sum;
             double newsum;
             switch(currency) {
