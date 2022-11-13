@@ -18,6 +18,7 @@ using System.Threading.Tasks;
                     MultiplicationTable.Multiplicate();
                     break;
                 case 3:
+                    Cinema.FillPlaces();
                     Cinema.AddClient();
                     break;
             }
@@ -95,30 +96,51 @@ using System.Threading.Tasks;
             }
         }
     }
+
     public static class Cinema { //Задание 3
 
         static int[] placeNum = new int[90]; //90 - количество мест
+        static int[] placeOcuppied = new int[90];
+
+        public static void FillPlaces() {
+            for (int i = 0; i < placeNum.Length; i++)
+            {
+                placeNum[i] = i;
+            }
+        }
 
         public static void AddClient() {
 
             int ticketsSold = 0;
             int ticketPrice = 0;
             int soldTicketPrice = 0;
-            Console.WriteLine("Введите номер места, для брони (1 - 90). Занятые места: ");
-            for (int i = 0; i < 9; i++)
+            bool isOccupied = false;
+
+            Console.WriteLine("Введите номер места, для брони (10 - 90). Занятые места: ");
+            for (int i = 1; i < 9; i++)
             {
                 ticketPrice = ticketPrice + 100;
+                Console.WriteLine();
                 for (int x = 0; x < 10; x++)
                 {
-                    if(placeNum[i*10+x] == 0) continue;
-                    ticketsSold++;
-                    Console.Write("{0}, ",placeNum[i*10+x]);
-                    soldTicketPrice = soldTicketPrice + ticketPrice;
+                    isOccupied = false;
+                    for (int z = 0; z < placeOcuppied.Length; z++)
+                    {
+                        if (placeOcuppied[z] == placeNum[i*10+x])
+                        {
+                            Console.Write("[{0}] ", placeNum[i*10+x]);
+                            ticketsSold++;
+                            soldTicketPrice = soldTicketPrice + ticketPrice;
+                            isOccupied = true;
+                        }
+                    }
+                    if(isOccupied == true) continue;
+                    Console.Write("{0} ", placeNum[i*10+x]);
                 }
             }
             Console.WriteLine("Продано билетов:{0}, на сумму {1}", ticketsSold, ticketsSold * soldTicketPrice);
             int chosenPlace = Convert.ToInt32(Console.ReadLine());
-            placeNum[chosenPlace] = chosenPlace;
+            placeOcuppied[chosenPlace] = chosenPlace;
             AddClient();
         }
 
